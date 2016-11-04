@@ -9,8 +9,25 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="lessmeaning.easymessage.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:id="@+id/list_view">
+    </ListView>
+
+    <Button
+        android:text="Send"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/button"
+        android:layout_below="@+id/list_view"
+        android:layout_toRightOf="@+id/editText" />
+
+    <EditText
+        android:layout_height="match_parent"
+        android:layout_width="260dp"
+        android:id="@+id/editText"
+        android:layout_below="@+id/list_view"
+        android:hint="Write your message here!"/>
+
 </RelativeLayout>
