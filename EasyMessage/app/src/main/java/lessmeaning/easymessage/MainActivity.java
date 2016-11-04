@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        LocalCore localCore = new LocalCore(MainActivity activity);
+        //LocalCore localCore = new LocalCore(MainActivity activity);
         mButton = (Button) findViewById(R.id.button);
         mListView = (ListView) findViewById(R.id.list_view);
         mButton.setOnClickListener(this);
@@ -25,9 +25,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick (View v) {
         if (v.getId() == mButton.getId()) {
-            localCore.addTemp(inf);
+            //localCore.addTemp(inf);
         }
     }
 
-    public void
+    public void reloadList(String row[]) {
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, row);
+        mListView.setAdapter(adapter);
+    }
 }
